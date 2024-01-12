@@ -117,7 +117,6 @@ function HeroSection() {
                   loop: true,
                 }}
               />
-              />
             </PrimaryTitle>
             <PrimaryText padding={'5%'}>
               Experience the fusion of tradition and innovation at our barbershop. Where
