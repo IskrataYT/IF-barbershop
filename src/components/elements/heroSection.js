@@ -77,19 +77,15 @@ function HeroSection() {
             <PrimaryTitle margin="8% 0 8% 0">
               {' '}
               <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString('Cutting Edge Style, Classic Comfort')
-                    .pauseFor(2500)
-                    .deleteAll()
-                    .typeString('Experience the fusion of tradition and innovation')
-                    .pauseFor(2500)
-                    .deleteAll()
-                    .typeString('Your style is our masterpiece')
-                    .start()
-                }}
                 options={{
-                  cursor: '', // This will remove the cursor
+                  cursor: '',
+                  strings: [
+                    'Cutting Edge Style, Classic Comfort',
+                    'Experience the fusion of tradition and innovation',
+                    'Your style is our masterpiece',
+                  ],
+                  autoStart: true,
+                  loop: true,
                 }}
               />
             </PrimaryTitle>
@@ -110,20 +106,17 @@ function HeroSection() {
             <PrimaryTitle margin="8% 0 8% 0">
               {' '}
               <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString('Cutting Edge Style, Classic Comfort')
-                    .pauseFor(2500)
-                    .deleteAll()
-                    .typeString('Experience the fusion of tradition and innovation')
-                    .pauseFor(2500)
-                    .deleteAll()
-                    .typeString('Your style is our masterpiece')
-                    .start()
-                }}
                 options={{
-                  cursor: '', // This will remove the cursor
+                  cursor: '',
+                  strings: [
+                    'Cutting Edge Style, Classic Comfort',
+                    'Experience the fusion of tradition and innovation',
+                    'Your style is our masterpiece',
+                  ],
+                  autoStart: true,
+                  loop: true,
                 }}
+              />
               />
             </PrimaryTitle>
             <PrimaryText padding={'5%'}>
