@@ -9,8 +9,6 @@ const StyledImg = styled.img`
   padding: ${(props) => props.padding || '0'};
   aspect-ratio: '16:9';
   object-fit: cover;
-  border: solid 20px;
-  border-image: url(assets/border12.png) 15% round;
 `
 
 const Image = ({ src, alt, ...props }) => {
