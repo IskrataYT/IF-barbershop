@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import LoopingVideo from '../atoms/video'
 import PrimaryText from '../atoms/text'
 import PrimaryTitle from '../atoms/title'
-import Image from '../atoms/image'
+import Logo from '../atoms/logo'
 import ButtonPrimary from '../atoms/buttonPrimary'
 import Typewriter from 'typewriter-effect'
 import { useEffect, useState, useRef } from 'react'
@@ -45,6 +45,10 @@ const TextOver = styled.div`
     }
   }
 
+  @media (max-width: 1024px) {
+    width: 50%;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     padding: 0 0 0 0;
@@ -73,8 +77,8 @@ function HeroSection() {
         <Background>
           <LoopingVideo />
           <TextOver>
-            <Image src="assets/Logo.svg" height="20%" />
-            <PrimaryTitle margin="8% 0 8% 0">
+            <Logo src="assets/Logo.svg" height="20%" />
+            <PrimaryTitle margin="4% 0 4% 0">
               {' '}
               <Typewriter
                 options={{
@@ -89,11 +93,11 @@ function HeroSection() {
                 }}
               />
             </PrimaryTitle>
-            <PrimaryText>
+            <PrimaryText padding={'0 5% 0 5%'}>
               Experience the fusion of tradition and innovation at our barbershop. Where
               every snip is a step towards perfection, and your style is our masterpiece.
             </PrimaryText>
-            <ButtonPrimary to={'/book-an-appointment'} margin={'40% 0 0 0'}>
+            <ButtonPrimary to={'/book-an-appointment'} margin={'35% 0 0 0'}>
               Book Now
             </ButtonPrimary>
           </TextOver>
@@ -101,9 +105,9 @@ function HeroSection() {
       )}
       {isMobile && (
         <Background>
-          <Image src="assets/Background-Long.jpg" height="40%" />
+          <Logo src="assets/Background-Long.jpg" height="40%" />
           <TextOver>
-            <PrimaryTitle margin="8% 0 8% 0">
+            <PrimaryTitle margin="4% 10%">
               {' '}
               <Typewriter
                 options={{
@@ -118,7 +122,7 @@ function HeroSection() {
                 }}
               />
             </PrimaryTitle>
-            <PrimaryText padding={'5%'}>
+            <PrimaryText padding={'0 5% 5% 5%'}>
               Experience the fusion of tradition and innovation at our barbershop. Where
               every snip is a step towards perfection, and your style is our masterpiece.
             </PrimaryText>

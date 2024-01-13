@@ -16,19 +16,19 @@ const PrimaryText = styled.p`
   }
 
   @media (max-width: 1024px) {
-    font-size: 18px;
-  }
-
-  @media (max-width: 768px) {
     font-size: 17px;
   }
 
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
   @media (max-width: 640px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   @media (max-width: 475px) {
-    font-size: 18px;
+    font-size: 14px;
   }
 `
 export default PrimaryText

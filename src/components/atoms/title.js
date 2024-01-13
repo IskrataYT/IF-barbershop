@@ -19,19 +19,19 @@ const PrimaryTitle = styled.h1`
     }
   
     @media (max-width: 1024px) {
-      font-size: 38px;
+      font-size: 36px;
     }
   
     @media (max-width: 768px) {
-      font-size: 38px;
+      font-size: 36px;
     }
   
     @media (max-width: 640px) {
-      font-size: 36px;
+      font-size: 34px;
     }
   
     @media (max-width: 475px) {
-      font-size: 36px;
+      font-size: 30px;
     }
 `
 

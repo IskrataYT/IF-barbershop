@@ -7,16 +7,12 @@ const StyledImg = styled.img`
   filter: ${(props) => props.filter || 'none'};
   margin: ${(props) => props.margin || '0'};
   padding: ${(props) => props.padding || '0'};
-  aspect-ratio: '16:9';
-  object-fit: cover;
-  border: solid 20px;
-  border-image: url(assets/border12.png) 15% round;
 `
 
-const Image = ({ src, alt, ...props }) => {
+const Logo = ({ src, alt, ...props }) => {
   const defaultSrc =
     "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" // SVG wireframe
   return <StyledImg src={src || defaultSrc} alt={alt || 'Image'} {...props} />
 }
 
-export default Image
+export default Logo
