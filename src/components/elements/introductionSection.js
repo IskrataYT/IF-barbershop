@@ -1,8 +1,9 @@
 import React from 'react'
-import PrimaryTitle from '../atoms/title'
+import SecondaryTitle from '../atoms/secondaryTitle'
 import PrimaryText from '../atoms/text'
 import Image from '../atoms/image'
 import styled from 'styled-components'
+import ButtonPrimary from '../atoms/buttonPrimary'
 
 const Container = styled.div`
   display: flex;
@@ -13,19 +14,25 @@ const Container = styled.div`
   align-items: center;
   justify-content: cetner;
 
-  @media (max-width: 768px) {
+  @media (max-width: 810px) {
     flex-direction: column;
 
-    div{
-      padding{ 0 10% 0 10%}
+    div {
+      padding: 0 6% 0 6% !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
 
-    h1, p{
+    h1,
+    p {
       text-align: center;
-      margin: 0 0 10% 0 ;
     }
 
-
+    button {
+      margin: 50% 0 50% 0 !important;
+    }
   }
 `
 
@@ -33,10 +40,13 @@ function IntroductionSection({ title, text, imageUrl }) {
   return (
     <Container>
       <div style={{ padding: '0 0 0 0' }}>
-        <PrimaryTitle align="left" margin="0 0 10% 0">
+        <SecondaryTitle align="left" margin="0 0 10% 0">
           {title}
-        </PrimaryTitle>
+        </SecondaryTitle>
         <PrimaryText>{text}</PrimaryText>
+        <ButtonPrimary to="/about" margin="10% 0 0 0">
+          Learn More
+        </ButtonPrimary>
       </div>
       <div style={{ padding: '0 0 0 10%' }}>
         <Image src={imageUrl} />

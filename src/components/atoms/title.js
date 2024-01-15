@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const PrimaryTitle = styled.h1`
   font-size: 48px;
   text-align: ${(props) => props.align || 'center'};
-  color: white;
+  text-transform: uppercase;
   font-weight: 800;
   font-family: 'EB Garamond', serif;
   color: #d8cd90;

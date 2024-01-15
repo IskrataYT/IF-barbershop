@@ -7,8 +7,9 @@ const StyledImg = styled.img`
   filter: ${(props) => props.filter || 'none'};
   margin: ${(props) => props.margin || '0'};
   padding: ${(props) => props.padding || '0'};
-  aspect-ratio: '16:9';
-  object-fit: cover;
+  border-radius: 15px;
+  border: solid 2px #d8cd90;
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.8);
 `
 
 const Image = ({ src, alt, ...props }) => {
