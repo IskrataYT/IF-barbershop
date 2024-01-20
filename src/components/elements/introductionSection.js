@@ -12,23 +12,19 @@ const Container = styled.div`
   color: white;
   padding: 5%;
   align-items: center;
-  justify-content: cetner;
+  justify-content: center;
+  box-shadow: 0px 11px 18px 0px rgba(0, 0, 0, 0.35) inset;
+
+  div {
+    padding: 0 6% 0 6% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
   @media (max-width: 810px) {
     flex-direction: column;
-
-    div {
-      padding: 0 6% 0 6% !important;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-
-    h1,
-    p {
-      text-align: center;
-    }
 
     button {
       margin: 50% 0 50% 0 !important;
@@ -36,21 +32,40 @@ const Container = styled.div`
   }
 `
 
-function IntroductionSection({ title, text, imageUrl }) {
+function IntroductionSection({ title, text, imageUrl, isLeft }) {
   return (
     <Container>
-      <div style={{ padding: '0 0 0 0' }}>
-        <SecondaryTitle align="left" margin="0 0 10% 0">
-          {title}
-        </SecondaryTitle>
-        <PrimaryText>{text}</PrimaryText>
-        <ButtonPrimary to="/about" margin="10% 0 0 0">
-          Learn More
-        </ButtonPrimary>
-      </div>
-      <div style={{ padding: '0 0 0 10%' }}>
-        <Image src={imageUrl} />
-      </div>
+      {isLeft ? (
+        <>
+          <div
+            style={{
+              padding: '0 0 0 10%',
+            }}
+          >
+            <Image src={imageUrl} />
+          </div>
+          <div style={{ padding: '0 0 0 0' }}>
+            <SecondaryTitle margin="0 0 10% 0">{title}</SecondaryTitle>
+            <PrimaryText align="center">{text}</PrimaryText>
+            <ButtonPrimary to="/about" margin="25% 0 0 0">
+              Learn More
+            </ButtonPrimary>
+          </div>
+        </>
+      ) : (
+        <>
+          <div style={{ padding: '0 0 0 0' }}>
+            <SecondaryTitle margin="0 0 10% 0">{title}</SecondaryTitle>
+            <PrimaryText align="center">{text}</PrimaryText>
+            <ButtonPrimary to="/about" margin="25% 0 0 0">
+              Learn More
+            </ButtonPrimary>
+          </div>
+          <div style={{ padding: '0 0 0 10%' }}>
+            <Image src={imageUrl} />
+          </div>
+        </>
+      )}
     </Container>
   )
 }
