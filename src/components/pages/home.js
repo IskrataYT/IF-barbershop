@@ -2,6 +2,8 @@ import NavBar from '../elements/navbar'
 import Footer from '../elements/footer'
 import HeroSection from '../elements/heroSection'
 import IntroductionSection from '../elements/introductionSection'
+import RatingsCarousel from '../elements/ratingsCarousel'
+import RatingsCard from '../elements/ratingCard'
 
 function Home() {
   return (
@@ -20,6 +22,7 @@ function Home() {
         is a masterpiece."
         imageUrl="assets/barbershop.jpg"
       />
+      <RatingsCard></RatingsCard>
       <Footer></Footer>
     </div>
   )
